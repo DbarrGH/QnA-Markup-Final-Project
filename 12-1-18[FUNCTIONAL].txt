@@ -1,0 +1,32 @@
+Title: Small Firm Efficiency and Security Interview
+Author: Dylan C. Barrett
+Description: class project for Suffolk University Law School http://www.codingthelaw.org/
+Before:
+<h1 style="text-align:center;">Small Firm Efficiency and Security Interview</h1>
+<h3>Do NOT rely on this interview, it is a class project and is likely incomplete.</h3>
+<p><b>This is a <a href="http://www.codingthelaw.org/">Coding the Law</a> class project for Suffolk University Law School, Fall 2018</b></p>
+
+Q(email): <p style="font-size:120%;"> Do you send documents via <b>E-mail</b> to individuals <b>outside</b> your organization? </p>This includes anyone on a different <b>domain.</b> The domain is the text found after the "@" symbol  in an email address.
+A: Yes
+	Q(email.1): Do you use a paid a or free email service?
+	A: Paid
+		Q(paid.1.1):GOTO:end
+	A: Free
+		Q(free.1.2): which email service do you use?
+		A: Gmail
+			Q(1.1.2.1):GOTO:end
+		A: Yahoo
+			Q(1.1.2.2):GOTO:end
+		A: Outlook
+			Q(1.1.2.3):GOTO:end
+		A: Mail.com
+			Q(1.1.2.4):GOTO:end
+		A: Other
+			Q(1.1.2.5):GOTO:end
+A: No - hit this to move to next question
+	Q(1.2):GOTO:cloud_or_fileshare
+Q(cloud_or_fileshare): <p style="font-size:120%;">Do you send or share documents with individuals outside your organization using a <b title="Cloud Is this"> Cloud Storage</b> or <b>File Sharing</b> service?</p>
+A: Yes
+A: No
+A: I am not sure. 
+Q(end): the end
