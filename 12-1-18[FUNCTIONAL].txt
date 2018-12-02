@@ -28,5 +28,5 @@ A: No - hit this to move to next question
 Q(cloud_or_fileshare): <p style="font-size:120%;">Do you send or share documents with individuals outside your organization using a <b title="Cloud Is this"> Cloud Storage</b> or <b>File Sharing</b> service?</p>
 A: Yes
 A: No
-A: I am not sure. 
+A: I am not sure.
 Q(end): the end
