@@ -1,42 +1,34 @@
 Title: Small Firm Efficiency and Security Interview
 Author: Dylan C. Barrett
-Description: class project for Suffolk University Law School <a href= "http://www.codingthelaw.org/">http://www.codingthelaw.org/</a>
+Description: This is Class project for Suffolk University Law School <a href= "http://www.codingthelaw.org/">http://www.codingthelaw.org/</a>
 Before:
 <h1 style="text-align:center;">Small Firm Efficiency and Security Interview</h1><p style="text-align:center;"><a href="http://www.codingthelaw.org/">Coding the Law</a><br>Suffolk University Law School, Fall 2018</p>
 
 Q(intro): <h3>Do NOT rely on this interview, it is a class project and is likely incomplete.</h3>
 <p>This is a <a href="http://www.codingthelaw.org/">Coding the Law</a> class project for Suffolk University Law School, Fall 2018</p>
 A: I understand.
-	Q(into2):GOTO:user_email
-Q(user_email): Please provide your email address so I am able to send you the results of this interview.
-X:
-	Q(user_email1):GOTO:name
-A: I would rather not provide this.
-	Q(user_email2):GOTO:name
-Q(name): May I have your name? (just your first will do)
-X:
-	Q(name2):GOTO:email
-Q(email): <p style="font-size:120%;"> Do you send documents via <b>E-mail</b> to individuals <b>outside</b> your organization? </p>This includes anyone on a different <b>domain.</b> The domain is the text found after the "@" symbol  in an email address.
+	Q(email_request): Please provide your email address so I am able to send you the results of this interview.
+	X:
+		Q(email_request_1):GOTO:end
+	A: I would rather not provide this.
+		Q(email_request_2):GOTO:case_management
+
+Q(case_management): Do you make use of a <b>case management</b> software?
 A: Yes
-	Q(email.1): Do you use a paid a or free email service?
-	A: Paid
-		Q(paid.1.1):GOTO:end
-	A: Free
-		Q(free.1.2): which email service do you use?
-		A: Gmail
-			Q(4.1.2.1):GOTO:end
-		A: Yahoo
-			Q(4.1.2.2):GOTO:end
-		A: Outlook
-			Q(4.1.2.3):GOTO:end
-		A: Mail.com
-			Q(4.1.2.4):GOTO:end
-		A: Other
-			Q(4.1.2.5):GOTO:end
-A: No - hit this to move to next question
-	Q(4.2):GOTO:cloud_or_fileshare
-Q(cloud_or_fileshare): <p style="font-size:120%;">Do you send or share documents with individuals outside your organization using a <b title="Cloud Is this"> Cloud Storage</b> or <b>File Sharing</b> service?</p>
-A: Yes
+	Q(case_management_1):GOTO:cm_exclusive
 A: No
-A: I am not sure.
-Q(end): the end
+	Q(case_management_2):GOTO:end
+
+Q(cm_exclusive): Do you use case management service as an exclusive means of...?
+A: Sending Client Documents
+	Q(cm_exclusive_1):GOTO:work_personal_computer
+A: Storing client documents.
+	Q(cm_exclusive_2):GOTO:end
+A: Storing and Sending Client Documents.
+	Q(cm_exclusive_3):GOTO:end
+A: I use none of the above exclusively.
+	Q(cm_exclusive_4):GOTO:work_personal_computer
+
+Q(work_personal_computer): Do you store client documents on a work or personal computer? (Locally on the computer's hard drive?)
+
+Q(end): end interview placeholder
