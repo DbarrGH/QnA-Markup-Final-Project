@@ -1,0 +1,16 @@
+Q(1): Would you like to write a letter to Santa? 
+A: Yes.
+	Q(whatiwant): What would you like for Christmas?
+	A(test2): yes
+		DOC(1.1.1):	I would like <x>text3</x> for Christmas. I hope all is well with you up north.<br><br> 
+					Sincerely,<br>
+					<x>test2</x> 
+		Q(1.1.1):GOTO:done
+	A(test3): no
+		DOC(1.1.2):	I would like <x>text3</x> for Christmas. I hope all is well with you up north.<br><br> 
+					Sincerely,<br>
+					<x>test2</x> 
+		Q(1.1.22):GOTO:done
+Q(done):Alright, are you ready to see your letter?
+A[javascript:submit2('https://www.qnamarkup.org/doc/parse/html/','POST','t','Proof read your letter. Print it out, and mail it to: Santa Clause, North Pole')]: Yes.
+	Q(2.1): Thank you.
