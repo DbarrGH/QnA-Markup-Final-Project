@@ -9,21 +9,18 @@ Q(intro): Do <b>NOT</b> rely on this interview or treat this interview as legal 
 
 A: <b>By clicking here, I am confirming that I understand:</b>
 	<ol type="1">
- <li>this Q&A is a class project;</li>
- <li>it does not constitute legal advice; and;</li>
+ <li>This Q&A is a class project.</li>
+ <li>These questions and results do not constitute legal advice.</li>
  <li>I should not rely on the information provided in this Q&A.</li>
  </ol>
-
-	Q(email_request): Please provide your email address so I am able to send you the results of this interview.
-	X:
-		Q(email_request_1):GOTO:end
-	A: I would rather not provide this.
-		Q(email_request_2):GOTO:case_management
+	Q(1.1):GOTO:case_management
 
 Q(case_management): Do you make use of a <b>case management</b> software?
-A: Yes
+A(Case management software may resolve some of the issues in this questionnaire. Because you indicted you use a case management software, some questions were excluded.): Yes
+	DOC(2.1): <b> Case Management Software may already have a solution..</b> <X>These products resolve some of the issues in this questionnaire. Because you indicted you use a case management software, some questions were excluded.</X>
 	Q(case_management_1):GOTO:cm_exclusive
-A: No
+A(Consider a case management software, as it will solve many of these issues simultaneously.): No
+	DOC(2.2): <b> Case Management Software Recommended: </b> <x>Consider a case management software, as it will solve many of these issues simultaneously.</x>
 	Q(case_management_2):GOTO:work_personal_computer
 
 Q(cm_exclusive): Do you use case management service as an exclusive means of...?
@@ -102,7 +99,12 @@ A: Free
 
 Q(email_service_used): Which of the following E-Mail services do you use?
 A: Gmail (Google Business)
+	Q(12.1):GOTO:end
 A: Outlook or Microsoft Live (Microsoft)
+	Q(12.2):GOTO:end
 A: Furnished by my Internet Service Provider
+	Q(12.3):GOTO:end
 
-Q(end): end interview placeholder
+Q(end):Alright, are you ready to see your letter?
+A[javascript:submit2('https://www.qnamarkup.org/doc/parse/html/','POST','t','Proof read your letter. Print it out, and mail it to: Santa Clause, North Pole')]: Yes.
+	Q(13.1): Thank you.
