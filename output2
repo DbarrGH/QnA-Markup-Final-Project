@@ -1,0 +1,10 @@
+Q(case_management): Do you make use of a <b>case management</b> software?
+A(Case management software will resolve many of the issues raised in the Q&A.): Yes
+	DOC(1.1): <x>Case management software will resolve many of the issues raised in the Q&A.</x>
+	Q(case_management_1):GOTO:done
+A: No
+	Q(case_management_2):GOTO:done
+
+Q(done):Alright, are you ready to see your letter?
+A[javascript:submit2('https://www.qnamarkup.org/doc/parse/html/','POST','t','Proof read your letter. Print it out, and mail it to: Santa Clause, North Pole')]: Yes.
+	Q(2.1): Thank you.
